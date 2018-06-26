@@ -25,3 +25,7 @@ def cost_func(theta1):
 def hypothesis(x, theta1):
     """Our "hypothesis function", a straight line through the origin."""
     return theta1*x
+
+# The plot: LHS is the data, RHS will be the cost function.
+fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(10,6.15))
+ax[0].scatter(x, y, marker='x', s=40, color='k')
