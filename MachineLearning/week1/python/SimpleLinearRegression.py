@@ -29,3 +29,11 @@ def hypothesis(x, theta1):
 # The plot: LHS is the data, RHS will be the cost function.
 fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(10,6.15))
 ax[0].scatter(x, y, marker='x', s=40, color='k')
+
+# First construct a grid of theta1 parameter pairs and their corresponding
+# cost function values.
+theta1_grid = np.linspace(-0.2,1,50)
+J_grid = cost_func(theta1_grid[:,np.newaxis])
+
+# The cost function as a function of its single parameter, theta1.
+ax[1].plot(theta1_grid, J_grid, 'k')
