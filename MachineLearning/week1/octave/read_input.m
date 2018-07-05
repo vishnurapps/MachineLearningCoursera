@@ -20,4 +20,5 @@ save hello.mat v
 
 #To delete all the variables, we can simply use clear
 clear
-load('hello.mat')
+load('sampleData.dat')
+who
